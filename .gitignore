@@ -1,0 +1,4 @@
+# Git Ignore for the Pascal Sandbox
+.claude/
+*.o
+
