@@ -9,6 +9,7 @@ Small Pascal training programms, the language I used a long time ago on differen
 
 ## Shell script (NixOS)
 
+As I'm currently using NixOS Linux on most of my computers, I needed a quick way to use [Free Pascal](https://www.freepascal.org/). 
 `startpascal.sh` opens a [Nix shell](https://nixos.org/manual/nix/stable/command-ref/nix-shell.html) with the Free Pascal compiler, Lazarus IDE, and GDB debugger available, without installing them system-wide. Run it with:
 
 ```bash
