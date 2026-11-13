@@ -6,6 +6,8 @@ Small Pascal training programms, the language I used a long time ago on differen
 | File | Description |
 | --- | --- |
 | `HelloWorld.pas` | Asks for your name and greets you, then demonstrates a `for`-loop counting from 1 to 10. |
+| `Loops.pas` | Demonstrates a `for`-loop that sums 1 to 10, and a `while`-loop that counts down from 20 by subtracting 2. |
+| `LoopsFunction.pas` | Same `for`/`while` loop demo as `Loops.pas`, but each loop is wrapped in its own function (`SumWithForLoop`, `CountDownWithWhileLoop`). |
 
 ## Shell script (NixOS)
 
