@@ -1,18 +1,18 @@
 program HelloWorld;
 
 var
-  naam: string;
+  name: string;
   i: integer;
 
 begin
   WriteLn();
-  Write('Hoe heet je? ');
-  ReadLn(naam);
-  WriteLn('Hallo, ', naam, '!');
+  Write('What is your name? ');
+  ReadLn(name);
+  WriteLn('Hello, ', name, '!');
 
   WriteLn();
   WriteLn('--[For-Next Demo]--');
   for i := 1 to 10 do
-    WriteLn('Getal: ', i);
+    WriteLn('Number: ', i);
 
 end.
