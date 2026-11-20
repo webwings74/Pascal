@@ -61,3 +61,7 @@ echo 'include "~/.nano/pascal.nanorc"' >> ~/.nanorc
 ```
 
 Then open a Pascal file, e.g. `nano DaysUntil.pas`. This needs GNU nano: on macOS the built-in `/usr/bin/nano` is actually `pico`, so install GNU nano with `brew install nano` first.
+
+## Docker (e.g. Synology NAS)
+
+The [`docker/`](docker/) folder contains a `Dockerfile` for a Debian image with Free Pascal, for machines without a native fpc such as a Synology DS718+. See [`docker/README.md`](docker/README.md) for setup and usage.
