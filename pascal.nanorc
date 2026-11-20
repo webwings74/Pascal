@@ -1,0 +1,46 @@
+## Syntax highlighting for (Free) Pascal / Object Pascal / Delphi files
+
+syntax pascal "\.(pas|pp|p|inc|lpr|dpr)$"
+header "^[[:space:]]*(program|unit|library)[[:space:]]+"
+comment "//"
+
+# Numbers: integers, reals, $hex, %binary, &octal
+color brightmagenta "\<[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+)?\>"
+color brightmagenta "\$[0-9A-Fa-f]+\>" "%[01]+\>" "&[0-7]+\>"
+
+# Built-in types
+icolor green "\<(integer|cardinal|shortint|smallint|longint|int64|byte|word|longword|qword|nativeint|nativeuint)\>"
+icolor green "\<(real|single|double|extended|currency|comp|boolean|bytebool|wordbool|longbool|char|ansichar|widechar)\>"
+icolor green "\<(string|shortstring|ansistring|widestring|unicodestring|pchar|pointer|variant|text|file|tdatetime)\>"
+
+# Constants
+icolor brightmagenta "\<(true|false|nil)\>"
+
+# Common built-in routines
+icolor cyan "\<(write|writeln|read|readln|halt|exit|break|continue|inc|dec|length|setlength|copy|pos|ord|chr|trunc|round|abs|sqr|sqrt|high|low|sizeof|assigned|new|dispose|paramstr|paramcount)\>"
+
+# Keywords
+icolor brightyellow "\<(program|unit|library|uses|interface|implementation|initialization|finalization)\>"
+icolor brightyellow "\<(const|type|var|threadvar|resourcestring|label|out|absolute)\>"
+icolor brightyellow "\<(begin|end|if|then|else|case|of|for|to|downto|do|while|repeat|until|with|goto)\>"
+icolor brightyellow "\<(procedure|function|constructor|destructor|operator|property|forward|external|inline|overload|override|virtual|abstract|reintroduce)\>"
+icolor brightyellow "\<(array|record|set|packed|object|class|interface|specialize|generic|helper)\>"
+icolor brightyellow "\<(private|protected|public|published|strict)\>"
+icolor brightyellow "\<(try|except|finally|raise|on|inherited|self|result)\>"
+icolor brightyellow "\<(and|or|not|xor|div|mod|shl|shr|in|is|as)\>"
+
+# Strings and character codes like #13
+color yellow "'([^']|'')*'"
+color yellow "#[0-9]+"
+
+# Compiler directives {$...}
+color brightred "\{\$[^}]*\}"
+
+# Comments: //, { } and (* *)
+color brightblue "//.*"
+color brightblue start="\{[^$]" end="\}"
+color brightblue start="\{$" end="\}"
+color brightblue start="\(\*" end="\*\)"
+
+# Trailing whitespace
+color ,green "[[:space:]]+$"

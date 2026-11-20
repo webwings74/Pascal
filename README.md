@@ -47,3 +47,17 @@ fpc -XR$(xcrun --show-sdk-path) DaysUntil.pas
 ```
 
 Optionally, the Lazarus IDE can be installed with `brew install --cask lazarus`.
+
+## Syntax highlighting in nano
+
+`pascal.nanorc` adds Pascal syntax highlighting to [GNU nano](https://www.nano-editor.org/) (keywords, types, built-in routines, numbers, strings, compiler directives and `//`, `{ }`, `(* *)` comments). Keywords are matched case-insensitively, and it applies to `.pas`, `.pp`, `.p`, `.inc`, `.lpr` and `.dpr` files.
+
+Install it by copying the file and including it in your `~/.nanorc`:
+
+```bash
+mkdir -p ~/.nano
+cp pascal.nanorc ~/.nano/
+echo 'include "~/.nano/pascal.nanorc"' >> ~/.nanorc
+```
+
+Then open a Pascal file, e.g. `nano DaysUntil.pas`. This needs GNU nano: on macOS the built-in `/usr/bin/nano` is actually `pico`, so install GNU nano with `brew install nano` first.
